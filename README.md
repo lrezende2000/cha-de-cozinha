@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How to run the code
+
+First clone this repository
+
+`git clone https://github.com/lrezende2000/cha-de-cozinha.git`
+
+Then run
+
+`yarn or npm install`
+
 ## Available Scripts
 
 In the project directory, you can run:
