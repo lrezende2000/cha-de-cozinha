@@ -5,7 +5,7 @@ import {
   WeddingInvite,
   Logo,
   InviteContent,
-  CoupleName,
+  // CoupleName,
   Invite,
   Details,
   CoupleImage
@@ -19,22 +19,21 @@ function Headline() {
       <WeddingInvite>
         <Logo src={logo} />
         <InviteContent>
-          <CoupleName>
+          <Text size={130} fontFamily="Lora" style={{ fontWeight: 700 }}>
             Clara
               <br />
               & Miguel
-            </CoupleName>
+            </Text>
           <Invite>
             Nós estamos muito animados para celebrar esta data com você!
             </Invite>
           <Details>
-            <Text size={20}><b>Onde: </b>Igreja</Text>
-            <Text size={20}><b>Quando: </b>23 DE OUTUBRO DE 2021, ÀS 16:15</Text>
-            <Text size={15} fontStyle="italic" style={{ textAlign: 'end' }}>
+            <Text size={15} fontStyle="italic">
               "No amor não há medo"
                 {' '}
               <span style={{ fontSize: 12, fontStyle: 'normal' }}>&nbsp;1 Jo. 4.18</span>
             </Text>
+            <Text size={20} fontFamily="Lora">23 DE OUTUBRO DE 2021, ÀS 16:15</Text>
           </Details>
         </InviteContent>
       </WeddingInvite>

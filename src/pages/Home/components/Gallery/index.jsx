@@ -7,7 +7,7 @@ import { Container } from './styles';
 function Gallery() {
   return (
     <Container>
-      <Text size={40} style={{ color: 'var(--secondary-color)', textAlign: 'center', margin: '50px 0' }}>Nossa História</Text>
+      <Text size={75} fontFamily="Lora" style={{ color: 'var(--color-primary)', textAlign: 'center', margin: '50px 0', fontWeight: 700 }}>Nossa História</Text>
       <Carrousel />
     </Container>
   );

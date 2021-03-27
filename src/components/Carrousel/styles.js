@@ -10,7 +10,6 @@ export const Container = styled.div`
 export const Image = styled.img`
   display: none;
   height: 500px;
-  transition: .5s;
 
   &.activeSlide {
     display: block;

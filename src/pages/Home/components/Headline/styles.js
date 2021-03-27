@@ -14,7 +14,7 @@ export const WeddingInvite = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--secondary-color);
+  background-color: var(--color-primary);
 `;
 
 export const Logo = styled.img`
@@ -26,17 +26,17 @@ export const InviteContent = styled.div`
   width: 100%;
 `;
 
-export const CoupleName = styled.h1`
-  margin-top: 50px;
-  font-size: 100px;
-  color: var(--primary-color);
-`;
+// export const CoupleName = styled.h1`
+//   margin-top: 50px;
+//   font-size: 100px;
+//   color: var(--primary-color);
+// `;
 
 export const Invite = styled.p`
   margin-top: 50px;
   font-size: 25px;
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--color-secondary);
 `;
 
 export const Details = styled.div`
