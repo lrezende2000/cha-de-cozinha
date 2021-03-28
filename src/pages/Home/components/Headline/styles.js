@@ -26,12 +26,6 @@ export const InviteContent = styled.div`
   width: 100%;
 `;
 
-// export const CoupleName = styled.h1`
-//   margin-top: 50px;
-//   font-size: 100px;
-//   color: var(--primary-color);
-// `;
-
 export const Invite = styled.p`
   margin-top: 50px;
   font-size: 25px;

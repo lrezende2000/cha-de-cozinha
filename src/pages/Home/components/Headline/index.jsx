@@ -5,7 +5,6 @@ import {
   WeddingInvite,
   Logo,
   InviteContent,
-  // CoupleName,
   Invite,
   Details,
   CoupleImage

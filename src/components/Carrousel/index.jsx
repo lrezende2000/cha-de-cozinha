@@ -46,7 +46,6 @@ function Carrousel() {
         <FiChevronLeft />
       </Button>
       { images.map((image, imageIndex) => {
-        console.log(index);
         let position = '';
         if (imageIndex === prevIndex(index)) {
           position = 'lastSlide';
