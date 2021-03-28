@@ -6,13 +6,5 @@ export const Container = styled.div`
     "Headline"
     "Gallery"
     "Presents"
-    "Fooer";
-`;
-
-export const Presents = styled.div`
-  grid-area: "Presents";
-`;
-
-export const Footer = styled.div`
-  grid-area: "Footer";
+    "Footer";
 `;

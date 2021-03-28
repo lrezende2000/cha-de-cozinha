@@ -1,5 +1,9 @@
+import { Container } from './styles';
+
 export default function Presents() {
   return (
-    <h1>Presents</h1>
+    <Container>
+      <h1>Presents</h1>
+    </Container>
   );
 }

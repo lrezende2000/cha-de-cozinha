@@ -1,9 +1,9 @@
 import { Container } from './styles';
 
-export default function Footer() {
+export default function Raffle() {
   return (
     <Container>
-      <h1>Footer</h1>
+      <h1>Raffle</h1>
     </Container>
   );
 }
