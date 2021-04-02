@@ -18,7 +18,12 @@ function Headline() {
       <WeddingInvite>
         <Logo src={logo} />
         <InviteContent>
-          <Text size={130} fontFamily="Lora" style={{ fontWeight: 700 }}>
+          <Text
+            size={130}
+            fontFamily="Lora"
+            fontWeight={700}
+            color="var(--color-secondary)"
+          >
             Clara
               <br />
               & Miguel
@@ -27,12 +32,20 @@ function Headline() {
             Nós estamos muito animados para celebrar esta data com você!
             </Invite>
           <Details>
-            <Text size={15} fontStyle="italic">
+            <Text
+              size={15}
+              fontStyle="italic"
+              color="var(--color-secondary)"
+            >
               "No amor não há medo"
                 {' '}
               <span style={{ fontSize: 12, fontStyle: 'normal' }}>&nbsp;1 Jo. 4.18</span>
             </Text>
-            <Text size={20} fontFamily="Lora">23 DE OUTUBRO DE 2021, ÀS 16:15</Text>
+            <Text
+              size={20}
+              fontFamily="Lora"
+              color="var(--color-secondary)"
+            >23 DE OUTUBRO DE 2021, ÀS 16:15</Text>
           </Details>
         </InviteContent>
       </WeddingInvite>

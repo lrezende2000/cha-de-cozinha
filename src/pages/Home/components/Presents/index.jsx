@@ -27,8 +27,19 @@ export default function Presents() {
 
   return (
     <Container>
-      <Text size={75} fontFamily="Lora" style={{ color: 'var(--color-primary)', textAlign: 'center', margin: '50px 0', fontWeight: 700 }}>Lista de presentes</Text>
-      <Text size={35} style={{ color: 'var(--color-primary)', textAlign: 'center', margin: '50px auto', maxWidth: '55%' }}>
+      <Text
+        size={75}
+        fontFamily="Lora"
+        color="var(--color-primary)"
+        textAlign="center"
+        fontWeight={700}
+        style={{ margin: '50px 0' }}
+      >Lista de presentes</Text>
+      <Text
+        size={35}
+        color="var(--color-primary)"
+        textAlign="center"
+        style={{ margin: '50px auto', maxWidth: '55%' }}>
         Os nossos presentes foram escolhidos com carinho. Se puder, ajude-nos com o início de nossa família.
       </Text>
       <Carousel showArrows={false} enableAutoPlay autoPlaySpeed={5000}>
@@ -44,7 +55,11 @@ export default function Presents() {
       <LinkWrapper>
         <Link to="/raffle">
           <RaffleButton>
-            <Text size={30} style={{ margin: 0 }}>
+            <Text
+              size={30}
+              color="var(--color-secondary)"
+              style={{ margin: 0 }}
+            >
               QUERO PRESENTEAR
             </Text>
             &nbsp;&nbsp;&nbsp;
