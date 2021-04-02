@@ -22,4 +22,7 @@ export const RaffledItemContainer = styled.div`
   border-radius: 10px;
   margin-top: 50px;
   padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

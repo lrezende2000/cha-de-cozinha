@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BsArrowRight } from "react-icons/bs";
 
-import { api } from '../../../../services/api';
+import { getActiveItems } from '../../../../services/api';
 
 import Carousel from 'react-elastic-carousel';
 import Text from '../../../../components/Text';
@@ -13,16 +13,9 @@ import './carouselStyles.css';
 export default function Presents() {
   const [items, setItems] = useState([]);
 
-  const getItems = async () => {
-    const { data: { itens } } = await api.get('/?limit=10');
-
-    setItems(itens.docs);
-  };
-
   const getImagePath = (image) => `/images/${image}.png`;
-
   useEffect(() => {
-    getItems();
+    getActiveItems().then(setItems).catch(() => setItems([]));
   }, [])
 
   return (
@@ -43,9 +36,7 @@ export default function Presents() {
         Os nossos presentes foram escolhidos com carinho. Se puder, ajude-nos com o início de nossa família.
       </Text>
       <Carousel showArrows={false} enableAutoPlay autoPlaySpeed={5000}>
-        {items
-          .filter(item => item.active)
-          .map(item =>
+        {items.map(item =>
             <div key={item._id}>
               <img src={getImagePath(item.name)} width={300} alt={item.name} />
             </div>
