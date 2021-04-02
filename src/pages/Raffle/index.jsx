@@ -10,16 +10,23 @@ import logo from '../../assets/logo.png';
 
 export default function Raffle() {
   const [raffledItem, setRaffledItem] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const raffleItem = async () => {
     const items = await getActiveItems();
-    const index = Math.floor(Math.random() * items.length);
-    const item = items[index];
+    if (items.length) {
 
-    api.post(`/update-item/${item._id}`, { active: false }).then(() => {
-      setRaffledItem(item);
-      localStorage.setItem('@chadecozinha:raffleditem', JSON.stringify(item));
-    }).catch(() => alert('Não foi possível sortear!'));
+      const index = Math.floor(Math.random() * items.length);
+      const item = items[index];
+
+      api.post(`/update-item/${item._id}`, { active: false }).then(() => {
+        setRaffledItem(item);
+        setLoading(false);
+        localStorage.setItem('@chadecozinha:raffleditem', JSON.stringify(item));
+      }).catch(() => alert('Não foi possível sortear!'));
+    } else {
+      setLoading(false);
+    }
   }
 
   useEffect(() => {
@@ -28,6 +35,7 @@ export default function Raffle() {
     if (item) {
       setTimeout(() => {
         setRaffledItem(JSON.parse(item));
+        setLoading(false);
       }, 2000);
     } else {
       raffleItem();
@@ -51,16 +59,16 @@ export default function Raffle() {
         color="var(--color-secondary)"
       >O presente sorteado foi:</Text>
       <RaffledItemContainer>
-        {raffledItem
-        ? (
-          <Text
-            size={45}
-            fontFamily="Lora"
-            fontWeight="700"
-            color="var(--color-bright-black)"
-          >{raffledItem.name}</Text>
-        )
-        : <Loading />
+        {loading
+          ? <Loading />
+          : (
+            <Text
+              size={45}
+              fontFamily="Lora"
+              fontWeight="700"
+              color="var(--color-bright-black)"
+            >{raffledItem ? raffledItem.name : 'Não há mais presentes!'}</Text>
+          )
         }
       </RaffledItemContainer>
     </Container>

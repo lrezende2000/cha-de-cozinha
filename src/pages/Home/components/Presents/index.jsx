@@ -14,8 +14,15 @@ export default function Presents() {
   const [items, setItems] = useState([]);
 
   const getImagePath = (image) => `/images/${image}.png`;
+  
   useEffect(() => {
-    getActiveItems().then(setItems).catch(() => setItems([]));
+    (async () => {
+      try {
+        setItems(await getActiveItems());
+      } catch {
+        setItems([]);
+      }
+    })()
   }, [])
 
   return (
