@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import couple from '../../../../assets/couple_01.jpg';
-
 
 export const Container = styled.div`
   grid-area: "Headline";
@@ -39,14 +37,4 @@ export const Invite = styled.p`
 
 export const Details = styled.div`
   margin: 50px 0;
-`;
-
-
-export const CoupleImage = styled.div`
-  width: 50%;
-  background-image: url(${couple});
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--primary-color);
 `;

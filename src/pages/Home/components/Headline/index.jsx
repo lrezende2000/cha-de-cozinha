@@ -7,7 +7,6 @@ import {
   InviteContent,
   Invite,
   Details,
-  CoupleImage
 } from './styles';
 
 import logo from '../../../../assets/logo.png';
