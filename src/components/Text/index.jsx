@@ -8,6 +8,10 @@ const StyledText = styled.p`
   font-weight: ${props => props.fontWeight ? props.fontWeight : 'regular'};
   text-align: ${props => props.textAlign ? props.textAlign : 'left'};
   color: ${props => props.color ? props.color : 'var(--color-primary)'};
+
+  @media (max-width: 550px) {
+    font-size: ${props => `${props.size * 0.7}px`};
+  }
 `;
 
 function Text({

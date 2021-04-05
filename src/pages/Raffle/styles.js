@@ -25,4 +25,8 @@ export const RaffledItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 550px) {
+    width: 90%;
+  }
 `;

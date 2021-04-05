@@ -23,10 +23,13 @@ function Headline() {
             fontFamily="Lora"
             fontWeight={700}
             color="var(--color-secondary)"
+            textAlign="center"
           >
             Clara
-              <br />
-              & Miguel
+            <br />
+            &
+            <br />
+            Miguel
             </Text>
           <Invite>
             Nós estamos muito animados para celebrar esta data com você!
@@ -49,8 +52,6 @@ function Headline() {
           </Details>
         </InviteContent>
       </WeddingInvite>
-
-      <CoupleImage />
     </Container>
   );
 }

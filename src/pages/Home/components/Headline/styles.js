@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import couple from '../../../../assets/couple.png';
+import couple from '../../../../assets/couple_01.jpg';
 
 
 export const Container = styled.div`
@@ -8,12 +8,13 @@ export const Container = styled.div`
 `;
 
 export const WeddingInvite = styled.div`
-  width: 50%;
+  width: 100%;
   padding: 5%;
   padding-bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: var(--color-primary);
 `;
 
@@ -24,6 +25,9 @@ export const Logo = styled.img`
 
 export const InviteContent = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const Invite = styled.p`

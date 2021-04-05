@@ -8,7 +8,7 @@ import Carousel from 'react-elastic-carousel';
 import Text from '../../../../components/Text';
 
 import { Container, RaffleButton, LinkWrapper } from './styles';
-import './carouselStyles.css';
+import '../../css/elasticCarousel.css';
 
 export default function Presents() {
   const [items, setItems] = useState([]);
@@ -23,7 +23,7 @@ export default function Presents() {
         setItems([]);
       }
     })()
-  }, [])
+  }, []);
 
   return (
     <Container>
@@ -39,8 +39,10 @@ export default function Presents() {
         size={35}
         color="var(--color-primary)"
         textAlign="center"
-        style={{ margin: '50px auto', maxWidth: '55%' }}>
-        Os nossos presentes foram escolhidos com carinho. Se puder, ajude-nos com o início de nossa família.
+        style={{ margin: '50px auto' }}>
+        Os nossos presentes foram escolhidos com carinho.
+        <br />
+        Se puder, ajude-nos com o início de nossa família.
       </Text>
       <Carousel showArrows={false} enableAutoPlay autoPlaySpeed={5000}>
         {items.map(item =>
